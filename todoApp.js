@@ -9,18 +9,17 @@ row.innerHTML = `<div class="col-md-3">
                 <div class="col-md-1"></div>
                 <div class="col-md-3">
                     <button id="add">Add item</button>
-                </div>`;
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4" id="items"></div>`;
 
-const sort = document.getElementById('sort');
-const search = document.getElementById('search');
-const btnAdd = document.getElementById('add');
-
-localStorage.setItem([
+/*localStorage.setItem([
     {
     id: 1,
     item: 'TV Stand',
     createdDate: new Date()
-    }/*,
+    },
     {
     id: 2,
     item: 'Phone',
@@ -40,9 +39,24 @@ localStorage.setItem([
     id: 5,
     item: 'Bricks',
     createdDate: new Date()
-    }*/
+    }
    ]
-   )
+   )*/
 const tv = localStorage.getItem('TV Stand')
 
-let todoList = []
+const todoList = []
+
+const sort = document.getElementById('sort');
+const search = document.getElementById('search');
+const items = document.getElementById('items');
+const btnAdd = document.getElementById('add');
+
+btnAdd.addEventListener('click', () => {
+    let i = todoList.length
+    todoList[i] = parseInt(search.value)
+    if(i >= 1){
+        items.innerHTML += ', '
+    }
+    items.innerHTML += todoList[i];
+    i++;
+})
