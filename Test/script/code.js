@@ -1,4 +1,5 @@
 // For Array and default todo item by ?
+// Create
 let items = JSON.parse( localStorage.getItem('records')) ?
 JSON.parse(localStorage.getItem('records')) : [
     {
@@ -8,3 +9,4 @@ JSON.parse(localStorage.getItem('records')) : [
     }
     
 ];
+// Add to arrry
