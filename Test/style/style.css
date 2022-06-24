@@ -10,6 +10,10 @@ h1{
     align-items: center;
     margin-right: 109px;
 }
+span{
+    max-width: 7vw;
+    margin: 1px 66px;
+}
 #task{
     display: flex;
     flex-direction: column;
