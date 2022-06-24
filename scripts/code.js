@@ -75,21 +75,19 @@ function removeItem(id) {
 
 document.querySelector('#sort').addEventListener('click', ()=> {
     items.sort( (a, b)=> {
-        // return (a.item < b.item) ? -1: 0; 
+        // return (a.item < b.item) ? -1: 0;
         if (a.item < b.item) {
             return -1
         }
         if (a.item > b.item) {
             return 1
-        } 
-            
+        }
         return 0
-        
     });
     // Save new data to the localstorage
-    localStorage.setItem('records', JSON.stringify(items));   
+    localStorage.setItem('records', JSON.stringify(items));
     showData();
-    alert('Please refresh page to sort item') 
+    alert('Please refresh page to sort item')
 });
 
 // localStorage.removeItem('records');
