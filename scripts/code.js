@@ -32,7 +32,6 @@ function showData(){
             </div>
             `
         })
-    
     })
 }
 
