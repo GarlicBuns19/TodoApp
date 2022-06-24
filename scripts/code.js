@@ -21,19 +21,18 @@ items.forEach((item,index)=>{
 console.table(items);
 
 function showData(){
-    addItems.addEventListener('click',()=>{
-        document.querySelector('#content').innerHTML = '';
-        items.forEach((item,index)=>{
-            document.querySelector('#content').innerHTML += `
-            <div class="items">
-            <div><input type="checkbox" id="check" onclick="visible(${index})"></div>
-            <div id="name">${item.item}</div>
-            <div><i class="bi bi-x" id="remove" onclick="removeItem(${index})"></i></div>
-            </div>
-            `
-        })
+    document.querySelector('#content').innerHTML = '';
+    items.forEach((item,index)=>{
+        document.querySelector('#content').innerHTML += `
+        <div class="items">
+        <div><input type="checkbox" id="check" onclick="visible(${index})"></div>
+        <div id="name">${item.item}</div>
+        <div><i class="bi bi-x" id="remove" onclick="removeItem(${index})"></i></div>
+        </div>
+        `
     })
 }
+addItems.addEventListener('click',showData())
 
 function addData() {
     // e.preventDefault();
