@@ -18,5 +18,5 @@ const list = document.getElementById('list');
 btnAddItem.addEventListener('click', (e) => {
         e = input.value
         todoArr.push(e)
-        list.innerHTML += `<li>${e}</li>`
+        list.innerHTML += `<li> <input type="checkbox"> ${e} </li>`
 });
