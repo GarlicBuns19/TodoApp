@@ -1,7 +1,3 @@
-// const row = document.querySelector('.row');
-// const input = document.getElementById('itemToDo');
-// const btnAddItem = document.getElementById('addItem');
-// const list = document.getElementById('list');
 const row = document.querySelector('.row');
 let todoArr = [];
 
