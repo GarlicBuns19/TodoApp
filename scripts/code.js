@@ -5,6 +5,7 @@ JSON.parse(localStorage.getItem('records')) : [
         item: 'TV Stand',
         createdDate: new Date()
     }
+    
 ];
 
 const addItems = document.querySelector('#add');
