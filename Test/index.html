@@ -6,37 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./style/style.css">
 
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="row d-flex justify-content-center align-content-center">
-                <div class="col-6 p-5">
-                    <h1 class="text-center">To do List</h1>
-                    <!-- The list -->
-                    <div class="form-group">
-                        <label for="adding">Add task to list</label>
-                        <input class="form-control text-center" type="text" placeholder="What do you want to do?" id="input">
-                    </div>
-                    <!-- Buttons -->
-                    <div class="form-group d-flex justify-content-between">
-                        <button id="btnSort">Sort List</button>
-                        <button id="btnAdd">Add Item</button>
-                    </div>
-                    <!-- Todo list -->
-                    <div class="form-group">
-                        <ul id="List">
-                            <div id="items">
-                                <li>
-                                    <input type="checkbox" id="check">${item.item}
-                                    <i class="bi bi-x" id="remove"></i>
-                                </li>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <h1>To do list</h1>
+                    <button>Sort</button>
+                    <input type="text" placeholder="What do you want to do?">
+                    <button>Add Task</button>
+                        <div class="row">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-4">
+                                <ul id="task"></ul>
                             </div>
-                        </ul>
-                    </div>
+                            <div class="col-md-4"></div>
+                        </div>
                 </div>
+                <div class="col-md-4"></div>
             </div>
         </div>
     </header>
@@ -46,7 +38,7 @@
     <footer>
 
     </footer>
-    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./script/code.js"></script>
 </body>
 </html>
