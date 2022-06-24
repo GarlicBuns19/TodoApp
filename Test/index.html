@@ -18,7 +18,7 @@
                     <!-- The list -->
                     <div class="form-group">
                         <label for="adding">Add task to list</label>
-                        <input class="form-control text-center" type="text" placeholder="What do you want to do?">
+                        <input class="form-control text-center" type="text" placeholder="What do you want to do?" id="input">
                     </div>
                     <!-- Buttons -->
                     <div class="form-group d-flex justify-content-between">
@@ -28,7 +28,12 @@
                     <!-- Todo list -->
                     <div class="form-group">
                         <ul id="List">
-
+                            <div id="items">
+                                <li>
+                                    <input type="checkbox" id="check">${item.item}
+                                    <i class="bi bi-x" id="remove"></i>
+                                </li>
+                            </div>
                         </ul>
                     </div>
                 </div>

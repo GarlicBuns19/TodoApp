@@ -10,3 +10,21 @@ JSON.parse(localStorage.getItem('records')) : [
     
 ];
 // Add to arrry
+const btnAdd = document.getElementById('btnAdd');
+
+items.forEach((item,index) => {
+    document.getElementById('list').innerHTML += `
+                                <li>
+                                    <input type="checkbox" id="check">${item.item}
+                                    <i class="bi bi-x" id="remove"></i>
+                                </li>`
+})
+// btnAdd.addEventListener('click',() => {
+//     items.push(
+//         {
+//             id: items.length +1,
+//             item: document.getElementById('input').value,
+//             createdDate: new Data()
+//         }
+//     )
+// })
