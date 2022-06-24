@@ -4,16 +4,22 @@ h1{
     align-items: center;
     justify-content: center;
 }
-#InputItem{
+.Input{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-
-
+#list{
+    display: flex;
+    flex-direction: column;
+    margin-left: 42%;
+}
 label{
-    margin-left:10%;
+    margin-left:2%;
+}
+#x{
+    margin-left: 8%;
 }
 #listItem[type='checkbox']:checked+label{
     text-decoration: line-through;
