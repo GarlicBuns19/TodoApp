@@ -9,7 +9,7 @@ let todoArr = [];
                         </div>
                     <div class="col-md-4"></div>
                     <div class="col-md-4"></div>
-                        <div class="col-md-4"><ul id="list"></ul></div>`
+                        <div class="col-md-4" id="list"></div>`
 })();
 const input = document.getElementById('itemToDo');
 const btnAddItem = document.getElementById('addItem');
@@ -18,5 +18,5 @@ const list = document.getElementById('list');
 btnAddItem.addEventListener('click', (e) => {
         e = input.value
         todoArr.push(e)
-        list.innerHTML += `<li> <input type="checkbox"> ${e} </li>`
+        list.innerHTML += `<div> <input type="checkbox" id="listItem"> <label>${e}</label> </div>`
 });
