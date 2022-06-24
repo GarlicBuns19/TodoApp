@@ -1,7 +1,8 @@
+// const row = document.querySelector('.row');
+// const input = document.getElementById('itemToDo');
+// const btnAddItem = document.getElementById('addItem');
+// const list = document.getElementById('list');
 const row = document.querySelector('.row');
-const input = document.getElementById('itemToDo');
-const btnAddItem = document.getElementById('addItem');
-const list = document.getElementById('list');
 let todoArr = [];
 
 (todoLayout = () => {
@@ -12,10 +13,14 @@ let todoArr = [];
                         </div>
                     <div class="col-md-4"></div>
                     <div class="col-md-4"></div>
-                        <div class="col-md-4" id="list"></div>`
+                        <div class="col-md-4"><ul id="list"></ul></div>`
 })();
+const input = document.getElementById('itemToDo');
+const btnAddItem = document.getElementById('addItem');
+const list = document.getElementById('list');
 
-btnAddItem.addEventListener('click', () => {
-    todoArr.push(input.value)
-    list.innerHTML = todoArr
+btnAddItem.addEventListener('click', (e) => {
+        e = input.value
+        todoArr.push(e)
+        list.innerHTML += `<li>${e}</li>`
 });
