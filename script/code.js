@@ -54,7 +54,7 @@ document.querySelector("#btnSort").addEventListener("click", () => {
       }
       return 0;
     });
-    loadData();
+    showData();
   });
 
 // Delete
