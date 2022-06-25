@@ -22,14 +22,19 @@ h1{
 }
 span{
     max-width: 7vw;
-    margin: 1px 66px;
+    /* margin: 1px 66px; */
 }
 #task{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-right: 109px;
-    min-width: none;
+}
+#task div{
+    display: flex;
+    align-items: center;
+    width: 300px;
+    justify-content: space-between;
 }
 input[type="checkbox"]:checked+span{
     text-decoration: line-through;

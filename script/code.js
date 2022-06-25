@@ -18,8 +18,8 @@ function showData() {
     <div>
         <input type="checkbox" id="check">
             <span>${item.item}</span>
-        <i class="bi bi-pencil-square" onclick="edit(${item.id})"></i>
-        <i class="bi bi-trash" onclick="remove(${index})"></i>
+          <i class="bi bi-pencil-square" onclick="edit(${item.id})"></i>
+          <i class="bi bi-trash" onclick="remove(${index})"></i>
     </div>
     `
 });
