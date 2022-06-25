@@ -92,17 +92,17 @@ btnClear.addEventListener('click', () => {
 });
 
 // Edit button
-let schedule = ['I', 'have', 'a', 'meeting', 'tommorrow'];
-// removes 4 first elements and replace them with another
-schedule.splice(0, 4, 'we', 'are', 'going', 'to', 'swim');
-console.log(schedule); 
-// ["we", "are", "going", "to", "swim", "tommorrow"]
+// let schedule = ['I', 'have', 'a', 'meeting', 'tommorrow'];
+// // removes 4 first elements and replace them with another
+// schedule.splice(0, 4, 'we', 'are', 'going', 'to', 'swim');
+// console.log(schedule);
+// // ["we", "are", "going", "to", "swim", "tommorrow"]
 
 function edit(id){
   const newTask = prompt('What would u change')
-  const task = items.find( todos => todos.item === id)
-  task.item = newTask
+  const task = items.find((item) => item.id === id);
+  task.items = newTask
   localStorage.setItem('records',JSON.stringify(items));
-  showData(items)
-}
+  showData();
+};
 
