@@ -101,7 +101,7 @@ btnClear.addEventListener('click', () => {
 function edit(id){
   const newTask = prompt('What would u change')
   const task = items.find((item) => item.id === id);
-  task.items = newTask
+  task.item = newTask
   localStorage.setItem('records',JSON.stringify(items));
   showData();
 };
