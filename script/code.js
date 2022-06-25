@@ -2,12 +2,12 @@
 // Create
 let items = JSON.parse( localStorage.getItem('records')) ?
 JSON.parse(localStorage.getItem('records')) : [
+  // or empty array []
     {
         id: 1,
         item: 'TV Stand',
         createdDate: new Date()
     }
-    
 ];
 
 // The Todo list when you add
@@ -18,10 +18,9 @@ function showData() {
     <div>
         <input type="checkbox" id="check">
             <span>${item.item}</span>
-        <i class="bi bi-pencil-square" onclick="edit(${item.item})"></i>
+        <i class="bi bi-pencil-square" onclick="edit(${item.id})"></i>
         <i class="bi bi-trash" onclick="remove(${index})"></i>
-            
-    </div>  
+    </div>
     `
 });
 console.table(items);
@@ -54,7 +53,7 @@ input.addEventListener("keyup", (event) => {
       // Trigger the button element with a click
       btnAdd.click();
   }
-})
+});
 
 
 // Sort button
@@ -73,7 +72,7 @@ btnSort.addEventListener("click", () => {
       return 0;
     });
     showData();
-  });
+});
 
 // Delete
 function remove(id) {
@@ -98,3 +97,12 @@ let schedule = ['I', 'have', 'a', 'meeting', 'tommorrow'];
 schedule.splice(0, 4, 'we', 'are', 'going', 'to', 'swim');
 console.log(schedule); 
 // ["we", "are", "going", "to", "swim", "tommorrow"]
+
+function edit(id){
+  const newTask = prompt('What would u change')
+  const task = items.find( todos => todos.item === id)
+  task.item = newTask
+  localStorage.setItem('records',JSON.stringify(items));
+  showData(items)
+}
+
