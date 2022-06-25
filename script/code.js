@@ -28,20 +28,36 @@ showData();
 
 // Add to arrry
 const btnAdd = document.getElementById('btnAdd');
+const input = document.getElementById('input');
 
 btnAdd.addEventListener('click',() => {
 items.push({
             id: items.length + 1,
-            item: document.getElementById('input').value,
+            item: input.value,
             createdDate: new Date()
             })
     showData();
     localStorage.setItem('records',JSON.stringify(items));
+    // Enter input
+    input.value = '';
+    // Focus on input and dont move away from it
+    input.focus();
 });
+
+// Press enter to add to array instead of mouse click
+input.addEventListener("keyup", (event) => {
+  if (event.key === "Enter") {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // Trigger the button element with a click
+      btnAdd.click();
+  }
+})
 
 
 // Sort button
-document.querySelector("#btnSort").addEventListener("click", () => {
+const btnSort = document.getElementById('btnSort');
+btnSort.addEventListener("click", () => {
     items.sort((a, b) => {
     let fa = a.item.toLowerCase(),
         fb = b.item.toLowerCase();
