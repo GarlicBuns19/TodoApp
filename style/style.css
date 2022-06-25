@@ -21,6 +21,9 @@ span{
     margin-right: 109px;
     min-width: none;
 }
+input[type="checkbox"]:checked+span{
+    text-decoration: line-through;
+}
 /* Responsive */
 @media screen and (min-width: 1px) and (max-width: 3px) {
     body{
