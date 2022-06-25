@@ -89,3 +89,10 @@ btnClear.addEventListener('click', () => {
     // alert('Refresh page to clear task')
     window.location.reload();
 });
+
+// Edit button
+let schedule = ['I', 'have', 'a', 'meeting', 'tommorrow'];
+// removes 4 first elements and replace them with another
+schedule.splice(0, 4, 'we', 'are', 'going', 'to', 'swim');
+console.log(schedule); 
+// ["we", "are", "going", "to", "swim", "tommorrow"]
