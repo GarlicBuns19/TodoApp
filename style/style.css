@@ -14,6 +14,7 @@
     justify-content: center;
     margin-top: 3%;
 }
+/* For color */
 body {
     height: 100vh;
     overflow: hidden;
@@ -23,7 +24,13 @@ body {
       rgb(102, 197, 212),
       rgb(209, 24, 175)
     );
-  }
+}
+.colMid{
+    background-color: white;
+}
+.colMid2{
+    background-color: white;
+}
 h1{
     display: flex;
     flex-direction: column;
@@ -38,7 +45,7 @@ span{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 109px;
+    margin-right: 100px;
 }
 #task div{
     display: flex;
@@ -50,8 +57,60 @@ input[type="checkbox"]:checked+span{
     text-decoration: line-through;
 }
 /* Responsive */
-@media screen and (min-width: 1px) and (max-width: 3px) {
-    body{
-        background-color: pink;
+@media screen and (min-width: 319px) and (max-width: 321px) {
+    h1{
+        margin-right: 31px;
+    }
+    #task div {
+        justify-content: space-around;
+        margin-right: 85px;
+        margin-left: 97px;
+    }
+    #task {
+        margin-right: 1px;
+    }
+    span{
+        white-space: nowrap;
+    }
+}
+@media screen and (min-width: 374px) and (max-width: 376px) {
+    h1{
+        margin-right: 31px;
+    }
+    #task div {
+        justify-content: space-around;
+        margin-right: 85px;
+        margin-left: 97px;
+    }
+    #task {
+        margin-right: 1px;
+    }
+    span{
+        white-space: nowrap;
+    }
+}
+@media screen and (min-width: 424px) and (max-width: 426px) {
+    h1{
+        margin-right: 31px;
+    }
+    #input{
+            width: 197px;
+    }
+    #btnSort{
+        margin-left: 30px;
+    }
+    #btnClear{
+        margin-left: 132px;
+    }
+    #task div {
+        justify-content: space-around;
+        margin-right: 85px;
+        margin-left: 97px;
+    }
+    #task {
+        margin-right: 1px;
+    }
+    span{
+        white-space: nowrap;
     }
 }
